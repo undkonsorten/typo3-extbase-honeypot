@@ -35,7 +35,7 @@ to protect:
     public function createAction(DTO $dto): ResponseInterface
 ```
 
-where `dto` is the name of your argument and `_hp` is the name of the fake
+where the `createAction` is the appropriated form action and `dto` is the name of your argument and `_hp` is the name of the fake
 property for your honeypot field. Just be sure to avoid collisions with existing
 properties.
 
