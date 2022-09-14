@@ -1,0 +1,27 @@
+{
+	"name": "undkonsorten/typo3-extbase-honeypot",
+	"type": "typo3-cms-extension",
+	"description": "Honey pot element for extbase object forms",
+	"homepage": "https://www.undkonsorten.com",
+	"license": [
+		"GPL-2.0+"
+	],
+	"keywords": [
+		"custom",
+		"content",
+		"ctype"
+	],
+	"require": {
+		"typo3/cms-core": "^9.5 || ^10.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Undkonsorten\\HoneyPot\\": "Classes"
+		}
+	},
+	"extra": {
+		"typo3/cms":{
+			"extension-key": "extbase_honeypot"
+		}
+	}
+}
