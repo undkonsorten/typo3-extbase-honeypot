@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-09-14T10:07:08Z"
+		  product-name="extbase_honeypot">
+		<header/>
+		<body>
+
+			<trans-unit id="field.honeyPot" approved="yes">
+				<target>Dieses Feld nicht ausfüllen.</target>
+				<source>Please do not fill in this field!</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
