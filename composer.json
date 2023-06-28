@@ -22,6 +22,9 @@
 	"extra": {
 		"typo3/cms":{
 			"extension-key": "extbase_honeypot"
+		},
+		"branch-alias": {
+			"dev-main": "0.1.x-dev"
 		}
 	}
 }
