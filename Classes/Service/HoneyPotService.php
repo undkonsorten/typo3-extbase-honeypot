@@ -13,10 +13,12 @@ class HoneyPotService
     {
         $argument->getPropertyMappingConfiguration()->skipProperties($propertyName);
         $honeyPotFilledIn = is_array($requestArgument) && isset($requestArgument[$propertyName]) && !empty($requestArgument[$propertyName]);
+        $honeyPotValidator = new HoneyPotValidator(['honeyPotFilledIn' => $honeyPotFilledIn, 'propertyPath' => $propertyName]);
+        if(method_exists($honeyPotValidator,'setOptions')) {
+            $honeyPotValidator->setOptions(['honeyPotFilledIn' => $honeyPotFilledIn, 'propertyPath' => $propertyName]);
+        }
         /** @noinspection PhpPossiblePolymorphicInvocationInspection */
-        $argument->getValidator()->addValidator(
-            new HoneyPotValidator(['honeyPotFilledIn' => $honeyPotFilledIn, 'propertyPath' => $propertyName])
-        );
+        $argument->getValidator()->addValidator($honeyPotValidator);
     }
 
 }
