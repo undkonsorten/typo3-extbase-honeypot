@@ -9,6 +9,10 @@
 				<target>Dieses Feld nicht ausfüllen.</target>
 				<source>Please do not fill in this field!</source>
 			</trans-unit>
+			<trans-unit id="error.1663185337._hp" approved="yes">
+				<target>Das Feld %s darf nicht ausgefüllt werden.</target>
+				<source>The field %s should not be filled in!</source>
+			</trans-unit>
 
 		</body>
 	</file>

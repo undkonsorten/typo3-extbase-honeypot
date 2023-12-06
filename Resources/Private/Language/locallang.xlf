@@ -8,6 +8,9 @@
 			<trans-unit id="field.honeyPot" approved="yes">
 				<source>Please do not fill in this field!</source>
 			</trans-unit>
+			<trans-unit id="error.1663185337._hp" approved="yes">
+				<source>The field %s should not be filled in!</source>
+			</trans-unit>
 
 		</body>
 	</file>

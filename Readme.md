@@ -54,6 +54,25 @@ plugin.tx_myext {
 }
 ```
 
+For showing error message if the field was filled, you can use the example in locallang files:
+`typo3-extbase-honeypot/Resources/Private/Language/locallang.xlf`
+Copy the lines with the proper error code to your extensions/site-packge/whatever and change property name if you not use the default `_hp`.
+
+Add f:translate snippet to the used action template.
+
+```html
+<f:if condition="{validationResults.flattenedErrors}">
+    <ul class="formerror">
+        <f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
+            <f:for each="{errors}" as="error"><li>
+                <f:translate key="error.{error.code}.{propertyPath}" arguments="{0:propertyPath}" />
+            </li></f:for>
+        </f:for>
+    </ul>
+</f:if>
+```
+
+
 ## Configuration
 
 No further configuration is needed - all you need is now in your code. You can
